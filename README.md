@@ -1,2 +1,2 @@
 # MBA-AI
-Códigos usados no MBA
+Códigos usados no MBA FIAP
