@@ -9,9 +9,6 @@
 3. [Parte 2 — Matemática do Attention](#-parte-2--matemática-do-attention)
 4. [Exemplos práticos de código com LoRA](#-exemplos-práticos-de-código-com-lora)
 5. [Exemplo prático da matemática do Attention em Python](#-exemplo-prático-da-matemática-do-attention-em-python)
-6. [Estrutura sugerida para GitHub](#-estrutura-sugerida-para-github)
-7. [Narrativa para portfólio](#-narrativa-para-portfólio)
-8. [Conclusão](#-conclusão)
 
 ---
 
