@@ -22,13 +22,16 @@
 
 # 📖 Introdução
 
-Modelos de Inteligência Artificial modernos possuem bilhões de parâmetros e são capazes de executar tarefas como geração de texto, programação, tradução, resumo e raciocínio complexo.
+Modelos de Inteligência Artificial modernos possuem bilhões de parâmetros e são capazes de executar tarefas como geração de texto, programação, tradução, 
+resumo e raciocínio complexo.
 
-Entretanto, adaptá-los para um domínio específico — jurídico, médico, financeiro ou atendimento ao cliente — costuma exigir um processo chamado **Fine-Tuning**, que pode demandar enormes recursos computacionais.
+Entretanto, adaptá-los para um domínio específico — jurídico, médico, financeiro ou atendimento ao cliente — costuma exigir um processo chamado **Fine-Tuning**,
+que pode demandar enormes recursos computacionais.
 
 Foi justamente para tornar esse processo mais eficiente que surgiu o **LoRA (Low-Rank Adaptation)**.
 
-Em vez de modificar todo o modelo, o LoRA aprende apenas pequenas adaptações, reduzindo drasticamente o custo de treinamento sem comprometer a qualidade dos resultados.
+Em vez de modificar todo o modelo, o LoRA aprende apenas pequenas adaptações, reduzindo drasticamente o custo de treinamento sem comprometer a 
+qualidade dos resultados.
 
 ---
 
@@ -98,13 +101,13 @@ onde:
 
 Na prática, durante a inferência:
 
-```text
+```
 Saída = Wx + (BA)x
 ```
 
 ou utilizando fator de escala:
 
-```text
+```
 Saída = Wx + (α/r)(BA)x
 ```
 
@@ -198,7 +201,7 @@ Após o treinamento, existe a possibilidade de incorporar permanentemente as ada
 
 Conceitualmente:
 
-```text
+```
 Wfinal = W + (α/r)(BA)
 ```
 
@@ -274,8 +277,202 @@ Empresas conseguem manter um único modelo base e carregar adaptadores diferente
 
 O LoRA representa uma mudança importante na forma como Grandes Modelos de Linguagem podem ser personalizados.
 
-Ao substituir o treinamento integral por pequenas adaptações de baixa dimensão, essa técnica torna possível ajustar modelos sofisticados utilizando menos recursos computacionais, menor armazenamento e custos significativamente reduzidos.
+Ao substituir o treinamento integral por pequenas adaptações de baixa dimensão, essa técnica torna possível ajustar modelos 
+sofisticados utilizando menos recursos computacionais, menor armazenamento e custos significativamente reduzidos.
 
-Para pesquisadores, empresas e desenvolvedores independentes, o LoRA viabiliza projetos que antes exigiam infraestrutura de alto desempenho, permitindo criar soluções especializadas de forma prática, escalável e eficiente.
+Para pesquisadores, empresas e desenvolvedores independentes, o LoRA viabiliza projetos que antes exigiam infraestrutura de 
+alto desempenho, permitindo criar soluções especializadas de forma prática, escalável e eficiente.
 
-Em um cenário onde os modelos continuam crescendo em tamanho e complexidade, estratégias como o LoRA tendem a permanecer como componentes essenciais do ecossistema moderno de Inteligência Artificial.
+Em um cenário onde os modelos continuam crescendo em tamanho e complexidade, estratégias como o LoRA tendem a permanecer 
+como componentes essenciais do ecossistema moderno de Inteligência Artificial.
+
+
+🔢 Exemplo Prático: Como o Mecanismo de Atenção Calcula Query (Q), Key (K) e Value (V)
+📌 Passo 1: Convertendo palavras em vetores (embeddings)
+
+Considere a frase:
+
+"Eu amo IA"
+
+Em um modelo Transformer, cada palavra é convertida em um vetor numérico chamado embedding.
+
+Para simplificar, utilizaremos embeddings com apenas 4 dimensões (d_emb = 4):
+
+Palavra	Embedding
+Eu	[1.0, 0.0, 1.0, 0.0]
+amo	[0.0, 1.0, 0.0, 1.0]
+IA	[1.0, 1.0, 0.0, 0.0]
+
+Agrupando esses vetores, obtemos a matriz de entrada X:
+
+          d_emb = 4
+        ┌─────────────────────┐
+Eu   →  │ 1.0  0.0  1.0  0.0 │
+amo  →  │ 0.0  1.0  0.0  1.0 │
+IA   →  │ 1.0  1.0  0.0  0.0 │
+        └─────────────────────┘
+
+Cada linha representa uma palavra e cada coluna representa uma característica aprendida pelo modelo.
+
+🏗️ Passo 2: Construindo as matrizes Q, K e V
+
+O mecanismo de atenção cria três novas representações para cada palavra:
+
+Query (Q) → representa o que a palavra está procurando.
+Key (K) → representa quais informações essa palavra pode oferecer.
+Value (V) → representa o conteúdo efetivamente compartilhado.
+
+Essas matrizes são obtidas multiplicando X por três matrizes de pesos aprendidas durante o treinamento:
+
+Q = X × WQ
+
+K = X × WK
+
+V = X × WV
+
+Supondo que desejamos vetores de tamanho dₖ = 3, as matrizes de pesos possuem dimensão 4 × 3.
+
+Neste exemplo didático, utilizaremos valores simplificados:
+
+WQ =
+|1 0 1|
+|0 1 0|
+|1 0 0|
+|0 1 1|
+
+WK =
+|0 1 0|
+|1 0 1|
+|0 0 1|
+|1 1 0|
+
+WV =
+|1 0 0|
+|0 1 0|
+|0 0 1|
+|1 1 0|
+🧮 Passo 3: Calculando Q
+
+Aplicando a multiplicação matricial:
+
+Q = X × WQ
+
+Obtemos:
+
+Palavra	Vetor Query
+Eu	[2, 0, 1]
+amo	[0, 2, 1]
+IA	[1, 1, 1]
+🔑 Passo 4: Calculando K
+K = X × WK
+
+Resultado:
+
+Palavra	Vetor Key
+Eu	[0, 1, 1]
+amo	[2, 1, 1]
+IA	[1, 1, 1]
+📦 Passo 5: Calculando V
+V = X × WV
+
+Resultado:
+
+Palavra	Vetor Value
+Eu	[1, 0, 1]
+amo	[1, 2, 0]
+IA	[1, 1, 0]
+
+Até este ponto, apenas criamos novas representações das palavras. O mecanismo de atenção ainda não foi aplicado.
+
+🎯 Passo 6: Calculando os escores de atenção
+
+Agora calculamos:
+
+Scores = Q × Kᵀ
+
+onde Kᵀ representa a transposta da matriz K.
+
+O resultado é:
+
+	Eu	amo	IA
+Eu	1	5	3
+amo	3	3	3
+IA	2	4	3
+
+Isso significa, por exemplo, que a palavra "Eu" está mais relacionada com "amo", pois obteve o maior escore (5).
+
+⚖️ Passo 7: Aplicando o fator de escala
+
+Para evitar valores excessivamente altos, dividimos cada elemento por:
+
+√dₖ = √3 ≈ 1,732
+
+Obtendo:
+
+	Eu	amo	IA
+Eu	0,577	2,887	1,732
+amo	1,732	1,732	1,732
+IA	1,155	2,309	1,732
+
+Essa normalização melhora a estabilidade numérica durante o treinamento.
+
+🧠 Passo 8: Aplicando a função Softmax
+
+Em seguida, transformamos cada linha em probabilidades usando a função Softmax.
+
+O resultado é:
+
+	Eu	amo	IA
+Eu	0,070	0,707	0,223
+amo	0,333	0,333	0,333
+IA	0,168	0,533	0,299
+
+Cada linha soma exatamente 1,0 (100%).
+
+Podemos interpretar esses valores da seguinte forma:
+
+A palavra "Eu" direciona aproximadamente 70,7% da sua atenção para "amo".
+A palavra "amo" distribui sua atenção igualmente entre todas as palavras.
+A palavra "IA" concentra cerca de 53,3% da atenção em "amo".
+🚀 Passo 9: Calculando a saída final
+
+Por fim, multiplicamos a matriz de atenção pela matriz V:
+
+Saída = Attention Weights × V
+
+Resultado:
+
+Palavra	Novo vetor
+Eu	[1.000, 1.637, 0.070]
+amo	[1.000, 1.000, 0.333]
+IA	[1.000, 1.365, 0.168]
+
+Esses novos vetores incorporam o contexto das demais palavras da frase.
+
+📚 Resumo do processo
+
+Todo o mecanismo de atenção pode ser resumido na seguinte sequência:
+
+Converter palavras em embeddings (X).
+Gerar Query (Q), Key (K) e Value (V) por multiplicação com matrizes de pesos.
+Calcular os escores de atenção usando Q × Kᵀ.
+Dividir os escores por √dₖ.
+Aplicar a função Softmax para obter probabilidades.
+Multiplicar essas probabilidades pela matriz V para gerar a representação final.
+
+A fórmula completa do mecanismo de atenção é:
+
+Attention(Q,K,V)=softmax(
+d
+k
+	​
+
+	​
+
+QK
+T
+	​
+
+)V
+
+Esse é o princípio matemático utilizado pelos modelos Transformer modernos. Em aplicações reais, as dimensões das matrizes costumam ser muito maiores (512, 768, 1024 ou mais), e o cálculo é executado em paralelo por múltiplas cabeças de atenção (Multi-Head Attention), permitindo que o modelo capture diferentes tipos de relacionamento entre as palavras de uma sequência.
