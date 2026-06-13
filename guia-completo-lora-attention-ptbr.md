@@ -1,7 +1,6 @@
 # 🧠 Guia Completo em Markdown: LoRA + Attention em LLMs
 
 ---
-
 ## 📚 Sumário
 
 1. [Visão geral](#-visão-geral)
