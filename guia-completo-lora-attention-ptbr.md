@@ -634,12 +634,3 @@ print("\nAttention Weights:\n", attention_weights)
 print("\nOutput:\n", output)
 ```
 
----
-
-```
-
----
-
-## 📄 Licença sugerida
-
-Se publicar no GitHub, você pode usar a licença MIT para deixar o material reaproveitável.
