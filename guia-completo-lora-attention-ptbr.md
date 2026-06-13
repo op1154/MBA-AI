@@ -1,7 +1,5 @@
 # 🧠 Guia Completo em Markdown: LoRA + Attention em LLMs
 
-> Material único em **Markdown**, em **português do Brasil**, reunindo **explicação conceitual**, **matemática**, **exemplos práticos de código** e uma **estrutura pronta para publicação no GitHub**.
-
 ---
 
 ## 📚 Sumário
