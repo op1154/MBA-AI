@@ -1,0 +1,28 @@
+!pip install unsloth
+
+!pip install --upgrade --no-deps 'unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git'
+
+!pip install --no-deps torch xformers trl peft accelerate bitsandbytes triton
+
+from unsloth import FastLanguageModel
+import torch
+
+checkpoint_modelo = 'unsloth/Meta-Llama-3.1-8B'
+
+modelo, tokenizador = FastLanguageModel.from_pretrained(
+    model_name = checkpoint_modelo,
+    max_seq_length = 2048,
+    dtype = None,
+    load_in_4bit = True
+    )
+
+prompt = 'Me fale sobre o que é Inteligencia Artificial'
+
+prompt_tokenizado = tokenizador([prompt], return_tensors='pt').to('cuda')
+
+from transformers import TextStreamer
+
+FastLanguageModel.for_inference(modelo)
+streamer_texto = TextStreamer(tokenizador)
+
+_ = modelo.generate(**prompt_tokenizado, streamer = streamer_texto, max_new_tokens = 128)
