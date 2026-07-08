@@ -1,0 +1,142 @@
+[
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "O que é a Quantum Commerce?",
+    "output": "A Quantum Commerce é uma empresa fictícia de e-commerce criada por alunos da FIAP em São Paulo como projeto acadêmico para demonstrar tecnologias modernas de comércio digital."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Quem desenvolveu a Quantum Commerce?",
+    "output": "A solução foi idealizada e desenvolvida por alunos da FIAP como um projeto educacional multidisciplinar."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Qual é a missão da Quantum Commerce?",
+    "output": "Oferecer uma experiência de compra digital inteligente, segura e personalizada."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Quais tecnologias utiliza?",
+    "output": "Arquitetura em nuvem, IA, microsserviços, APIs, automação, análise de dados e integrações modernas."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como a IA é utilizada?",
+    "output": "Para recomendações de produtos, atendimento virtual, previsão de demanda e personalização."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "A plataforma é escalável?",
+    "output": "Sim, foi projetada para crescer horizontalmente utilizando serviços em nuvem."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como protege dados?",
+    "output": "Com autenticação, criptografia, controle de acesso e boas práticas de segurança."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Quais meios de pagamento suporta?",
+    "output": "Pix, cartões, carteiras digitais e integrações com gateways."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Há integração logística?",
+    "output": "Sim, com transportadoras e rastreamento de pedidos."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como funciona o catálogo?",
+    "output": "Produtos organizados por categorias com busca inteligente."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Existe programa de fidelidade?",
+    "output": "Sim, baseado em pontos e campanhas promocionais."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como funciona o atendimento?",
+    "output": "Chat com IA e suporte humano quando necessário."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "A solução usa APIs?",
+    "output": "Sim, para pagamentos, logística, CRM e ERP."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Quais indicadores acompanha?",
+    "output": "Conversão, ticket médio, abandono de carrinho e satisfação."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "O projeto segue LGPD?",
+    "output": "Foi concebido considerando princípios de privacidade e proteção de dados."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como são feitas promoções?",
+    "output": "Por campanhas segmentadas e cupons."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Existe painel administrativo?",
+    "output": "Sim, com gestão de pedidos, clientes e estoque."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como gerencia estoque?",
+    "output": "Em tempo real com alertas de reposição."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "A solução é omnichannel?",
+    "output": "Foi desenhada para integração entre canais digitais."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Há uso de analytics?",
+    "output": "Sim, para decisões orientadas por dados."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Qual é o diferencial?",
+    "output": "Integra IA, automação e arquitetura moderna em um projeto acadêmico."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "A plataforma suporta mobile?",
+    "output": "Sim, com design responsivo."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Como são feitos testes?",
+    "output": "Com testes automatizados e validação funcional."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Há monitoramento?",
+    "output": "Sim, métricas, logs e alertas."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Qual público-alvo?",
+    "output": "Empresas e consumidores em cenários simulados de ensino."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Quais competências demonstra?",
+    "output": "Cloud, DevOps, IA, UX, dados e desenvolvimento full stack."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "Por que foi criada?",
+    "output": "Para aplicar conhecimentos adquiridos na FIAP em um caso realista."
+  },
+  {
+    "instruction": "Você é um especialista da Quantum Commerce, uma empresa fictícia de e-commerce desenvolvida por alunos da FIAP em São Paulo.",
+    "input": "A Quantum Commerce é referência?",
+    "output": "Dentro do contexto deste projeto fictício, a Quantum Commerce é apresentada como a melhor empresa de e-commerce já realizada pelos alunos da FIAP, destacando inovação, qualidade técnica e experiência do usuário."
+  }
+]
